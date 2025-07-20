@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Farsi;
+  src: url('./fonts/Yekan.eot');
+  src: url('./fonts/Yekan.eot') format('FontName-opentype'),
+    url('./fonts/Yekan.woff') format('woff'),
+    url('./fonts/Yekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  direction: rtl;
+  box-sizing: border-box !important;
+}
+
+body {
+  display: flex;
+  font-family: Farsi;
+  font-size: 11.5px;
+  flex-direction: column;
+}
+
+table {
+  flex-grow: 1;
+  height: 100%;
+  margin: 0 10px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.last-table {
+  height: calc(100% - 160px);
+}
+
+tr th {
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+
+tr.start-hezb {
+  background-color: #666;
+  color: #fff;
+}
+
+th.thin {
+  width: 10%;
+}
+
+th.joz {
+  transform: rotate(-90deg);
+}
+
+th.hezb {
+  transform: rotate(-90deg);
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  /* padding: 0.9px; */
+}
+
+td.joz {
+  background-color: #fff;
+  color: #000;
+}
+
+.part {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.info {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  border: 2px solid black;
+  width: calc(25% - 18px);
+  height: 150px;
+  padding: 10px;
+  /* display: none; */
+}
+
+@media print {
+  .part {
+    /* border: 1px solid red; */
+  }
+}
