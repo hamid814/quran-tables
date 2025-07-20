@@ -1,1 +1,70 @@
-@font-face{font-family:Farsi;src:url(/assets/Yekan-2e674452.eot);src:url(/assets/Yekan-2e674452.eot) format("FontName-opentype"),url(/assets/Yekan-9c98a562.woff) format("woff"),url(/assets/Yekan-43747aea.ttf) format("truetype");font-weight:400;font-style:normal}*{margin:0;direction:rtl;box-sizing:border-box!important}body{display:flex;font-family:Farsi;font-size:11.5px;flex-direction:column}table{flex-grow:1;height:100%;margin:0 10px;border-collapse:collapse;table-layout:fixed}.last-table{height:calc(100% - 160px)}tr th{padding-top:10px;padding-bottom:12px}tr.start-hezb{background-color:#666;color:#fff}th.thin{width:10%}th.joz,th.hezb{transform:rotate(-90deg)}td,th{border:1px solid black;text-align:center}td.joz{background-color:#fff;color:#000}.part{width:100vw;height:100vh;display:flex;position:relative;overflow:hidden}.info{position:absolute;left:10px;bottom:0px;border:2px solid black;width:calc(25% - 18px);height:150px;padding:10px}
+@font-face {
+  font-family: Farsi;
+  src: url(/docs/assets/Yekan-2e674452.eot);
+  src: url(/docs/assets/Yekan-2e674452.eot) format('FontName-opentype'),
+    url(/docs/assets/Yekan-9c98a562.woff) format('woff'),
+    url(/docs/assets/Yekan-43747aea.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  direction: rtl;
+  box-sizing: border-box !important;
+}
+body {
+  display: flex;
+  font-family: Farsi;
+  font-size: 11.5px;
+  flex-direction: column;
+}
+table {
+  flex-grow: 1;
+  height: 100%;
+  margin: 0 10px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.last-table {
+  height: calc(100% - 160px);
+}
+tr th {
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+tr.start-hezb {
+  background-color: #666;
+  color: #fff;
+}
+th.thin {
+  width: 10%;
+}
+th.joz,
+th.hezb {
+  transform: rotate(-90deg);
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+}
+td.joz {
+  background-color: #fff;
+  color: #000;
+}
+.part {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.info {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  border: 2px solid black;
+  width: calc(25% - 18px);
+  height: 150px;
+  padding: 10px;
+}
