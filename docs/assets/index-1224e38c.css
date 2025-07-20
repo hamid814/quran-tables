@@ -1,9 +1,9 @@
 @font-face {
   font-family: Farsi;
-  src: url(/docs/assets/Yekan-2e674452.eot);
-  src: url(/docs/assets/Yekan-2e674452.eot) format('FontName-opentype'),
-    url(/docs/assets/Yekan-9c98a562.woff) format('woff'),
-    url(/docs/assets/Yekan-43747aea.ttf) format('truetype');
+  src: url(/quran-tables/assets/Yekan-2e674452.eot);
+  src: url(/quran-tables/assets/Yekan-2e674452.eot) format('FontName-opentype'),
+    url(/quran-tables/assets/Yekan-9c98a562.woff) format('woff'),
+    url(/quran-tables/assets/Yekan-43747aea.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
