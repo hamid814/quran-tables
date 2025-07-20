@@ -21,6 +21,48 @@ body {
   flex-direction: column;
 }
 
+.panel {
+  text-align: center;
+  padding: 20px;
+  width: auto;
+  margin: 10px auto;
+  border-radius: 15px;
+  background-color: aquamarine;
+  border: 3px solid darkgreen;
+}
+
+.panel input {
+  padding: 6px;
+  font-size: 16px;
+  margin-left: 15px;
+  font-family: Farsi;
+  border-radius: 5px;
+  border-width: 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.panel input[type='submit'] {
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50px;
+  border-width: 0;
+  background-color: darkgreen;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+}
+
+#message {
+  padding: 3px;
+  background-color: firebrick;
+  width: 150px;
+  margin: 15px auto 0 auto;
+  color: white;
+  border-radius: 100px;
+  display: none;
+}
+
 table {
   flex-grow: 1;
   height: 100%;
@@ -83,11 +125,10 @@ td.joz {
   width: calc(25% - 18px);
   height: 150px;
   padding: 10px;
-  /* display: none; */
 }
 
 @media print {
-  .part {
-    /* border: 1px solid red; */
+  .panel {
+    display: none;
   }
 }

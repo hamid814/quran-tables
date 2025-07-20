@@ -18,6 +18,44 @@ body {
   font-size: 11.5px;
   flex-direction: column;
 }
+.panel {
+  text-align: center;
+  padding: 20px;
+  width: auto;
+  margin: 10px auto;
+  border-radius: 15px;
+  background-color: #7fffd4;
+  border: 3px solid darkgreen;
+}
+.panel input {
+  padding: 6px;
+  font-size: 16px;
+  margin-left: 15px;
+  font-family: Farsi;
+  border-radius: 5px;
+  border-width: 0;
+  text-align: center;
+  background-color: #fff;
+}
+.panel input[type='submit'] {
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50px;
+  border-width: 0;
+  background-color: #006400;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+#message {
+  padding: 3px;
+  background-color: #b22222;
+  width: 150px;
+  margin: 15px auto 0;
+  color: #fff;
+  border-radius: 100px;
+  display: none;
+}
 table {
   flex-grow: 1;
   height: 100%;
@@ -62,9 +100,14 @@ td.joz {
 .info {
   position: absolute;
   left: 10px;
-  bottom: 0px;
+  bottom: 0;
   border: 2px solid black;
   width: calc(25% - 18px);
   height: 150px;
   padding: 10px;
+}
+@media print {
+  .panel {
+    display: none;
+  }
 }

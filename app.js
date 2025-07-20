@@ -5,8 +5,78 @@ moment.loadPersian({
   dialect: 'persian-modern',
 });
 
-const startDate = '1404/04/22';
+let startDate = '1404/04/22';
 let startHezb = 1;
+
+const yearInput = document.querySelector('input#year');
+const monthInput = document.querySelector('input#month');
+const dayInput = document.querySelector('input#day');
+const submitBtn = document.querySelector('input#submit');
+const messageElem = document.querySelector('div#message');
+
+function message(num) {
+  messageElem.style.display = 'block';
+
+  if (num === 1) {
+    messageElem.innerHTML = 'تاریخ معتبر نیست';
+  }
+
+  setTimeout(() => {
+    messageElem.innerHTML = '';
+    messageElem.style.display = 'none';
+  }, 5000);
+}
+
+submitBtn.addEventListener('click', () => {
+  messageElem.innerText = '1';
+
+  const month = ('0' + monthInput.value).slice(-2);
+  const day = ('0' + dayInput.value).slice(-2);
+
+  const startDate = `${yearInput.value}/${month}/${day}`;
+
+  const parts = document.querySelectorAll('.part');
+
+  parts.forEach((part) => part.remove());
+
+  startHezb = 1;
+
+  // check valid date
+  if (Number(month) === 7 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+  if (Number(month) === 8 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+  if (Number(month) === 9 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+  if (Number(month) === 10 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+  if (Number(month) === 11 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+  if (Number(month) === 12 && Number(day) === 31) {
+    message(1);
+    return;
+  }
+
+  for (let i = 1; i <= 120; i++) {
+    const part = createOnePart(startDate, startHezb);
+
+    startHezb += 1;
+
+    document.body.appendChild(part);
+  }
+
+  messageElem.innerText = '';
+});
 
 function createTableData(text, clName, isHead) {
   let td;
@@ -66,12 +136,14 @@ function createOnePart(dayOne, startHezb) {
   dayOne: string
   startHezb: number
   */
-  dayOne = moment(dayOne, 'jYYYY/jM/jD');
+  dayOne = new moment(dayOne, 'jYYYY/jM/jD');
 
   const hezbs = [];
   const dates = [];
 
-  for (var i = 1; i <= 120; i++) {
+  dates.push(dayOne.format('dddd - jMM/jDD'));
+
+  for (var i = 1; i <= 119; i++) {
     dates.push(dayOne.add(1, 'day').format('dddd - jMM/jDD'));
   }
 
@@ -144,12 +216,4 @@ function createOnePart(dayOne, startHezb) {
   part.appendChild(infoElem);
 
   return part;
-}
-
-for (let i = 1; i <= 120; i++) {
-  const part = createOnePart(startDate, startHezb);
-
-  startHezb += 1;
-
-  document.body.appendChild(part);
 }
