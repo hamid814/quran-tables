@@ -12,6 +12,7 @@ const yearInput = document.querySelector('input#year');
 const monthInput = document.querySelector('input#month');
 const dayInput = document.querySelector('input#day');
 const submitBtn = document.querySelector('input#submit');
+const infoInput = document.querySelector('textarea#info');
 const messageElem = document.querySelector('div#message');
 
 function message(num) {
@@ -204,7 +205,7 @@ function createOnePart(dayOne, startHezb) {
 
   const infoElem = document.createElement('span');
   infoElem.className = 'info';
-  infoElem.innerHTML = 'متن';
+  infoElem.innerHTML = infoInput.value;
 
   const part = document.createElement('div');
   part.className = 'part';

@@ -21,10 +21,27 @@ body {
   flex-direction: column;
 }
 
+.panel-container {
+  display: flex;
+  width: 700px;
+  margin: 0 auto;
+}
+
+#info {
+  padding: 10px;
+  font-size: 18px;
+  width: 270px;
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 200px;
+  resize: none;
+}
+
 .panel {
   text-align: center;
   padding: 20px;
   width: auto;
+  height: 200px;
   margin: 10px auto;
   border-radius: 15px;
   background-color: aquamarine;
@@ -128,7 +145,7 @@ td.joz {
 }
 
 @media print {
-  .panel {
+  .panel-container {
     display: none;
   }
 }
